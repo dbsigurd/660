@@ -17,6 +17,12 @@ app.get('/test', function (req, res) {
   res.send('hit');
 }
 );
+app.post('/movement', function (req, res) {
+  console.log('hit');
+  console.log(req);
+  res.send('hit');
+}
+);
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
 
 // var mongo = require('mongodb');
