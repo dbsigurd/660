@@ -22,3 +22,8 @@ router.post('/test', function (req, res) {
     res.send('hit');
   }
 );
+router.get('/test', function (req, res) {
+    console.log('hit');
+    res.send('hit');
+  }
+);
