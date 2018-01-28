@@ -24,7 +24,7 @@ app.post('/newday', function (req, res) {
   });
 
 app.get('/status', function (req, res) {
-  res.send(userIsSleepingIn.toString());
+  res.send('The user is sleeping in: ' + userIsSleepingIn.toString());
 });
 
 app.post('/sleepingIn', function (req, res) {
