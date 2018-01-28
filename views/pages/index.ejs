@@ -33,15 +33,16 @@
       </p>
       <p>It should like the image below.</p>
       <img src="IoT.JPG">
-      <p>The App res</p>
+      <p>The IBM IoT App in is the android device connected to the node red application. It first checks if the message is coming before the user needs to be up, if the message is from when the user should be moving, or sufficently later in the day. If it is outside the "wake up" hours the app sends a single message to the server letting it know the wake up time is not active, and sends a yellow stand by to the phone. If it is in the wake up time the app checks if the user is moving. If they do not move in 5 minutes the app will notify my server and send a red colour back to the android device.</p>
+      <p>The timestamp input is an injection that fires every morning at 1:00 am to reset the server for the day.</p>
     </div>
     <div class="col-md-12">
         <h3>Step 3 </h3>
-        <p> download the server code from <a href="https://github.com/dbsigurd/660">here</a>. The instructions for setting up your own server are in the read me. You'll need to follow the heroku getting started guide and install the heroku CLI. </p>
+        <p>My server code can be downloaded from <a href="https://github.com/dbsigurd/660">here</a>. The instructions for setting up your own server are in the read me. You'll need to follow the heroku getting started guide and install the heroku CLI. </p>
     </div>
     <div class="col-md-12">
         <h2>Recap </h2>
-        <p>Step 1 went followed IBM's guide for setting up an andriod phone as an IoT device. From there I created my own node red layout which resets the sleeping status of my server every morning at 1:00 am with an api call. In the morning during the wake up time the app needs to recieve sufficent movement data within the past 5 minutes otherwise it sets the andriod phone screen to red, and submits a API notification to my server that the user is not up.</p>
+        <p>We start by following IBM's guide for setting up an andriod phone as an IoT device. From there I created my own node red layout which resets the sleeping status of my server every morning at 1:00 am with an API call. In the morning during the wake up time the app needs to recieve sufficent movement data within the 5 minutes intervals or it sets the andriod phone screen to red, and submits a API notification to my server that the user is not up.</p>
     </div>
 
     <p>
