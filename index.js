@@ -23,6 +23,11 @@ app.post('/newday', function (req, res) {
     res.send('reset');
   });
 
+app.post('/sleep', function (req, res) {
+    userIsSleepingIn = true;
+    res.send('reset');
+  });
+
 app.get('/status', function (req, res) {
   res.send('The user is sleeping in: ' + userIsSleepingIn.toString());
 });
