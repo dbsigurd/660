@@ -5,6 +5,7 @@ const PORT = process.env.PORT || 5000;
 var app = express();
 var http = require('http');
 var bodyParser = require('body-parser');
+var userIsSleepingIn = false;
 app.use(bodyParser.json()); // support json encoded bodies
 
 app.use(express.static(path.join(__dirname, 'public')))
@@ -17,10 +18,26 @@ app.get('/test', function (req, res) {
   res.send('hit');
 }
 );
-app.post('/movement', function (req, res) {
+app.post('/newday', function (req, res) {
+    userIsSleepingIn = false;
+    res.send('reset');
+  });
+
+app.get('/status', function (req, res) {
+  res.send(userIsSleepingIn.toString());
+});
+
+app.post('/sleepingIn', function (req, res) {
   console.log('hit');
-  console.log(req);
-  res.send('hit');
+  let time = new Date();
+  if (time.getHours() < 9 &&
+    time.getHours() > 10)
+  {
+    res.send("the user doesn't have to be up");
+  } else {
+    userIsSleepingIn = true;
+    res.send('The user is sleeping in');
+  }
 }
 );
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
