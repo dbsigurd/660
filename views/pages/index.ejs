@@ -41,6 +41,14 @@
         <p>My server code can be downloaded from <a href="https://github.com/dbsigurd/660">here</a>. The instructions for setting up your own server are in the read me. You'll need to follow the heroku getting started guide and install the heroku CLI. </p>
     </div>
     <div class="col-md-12">
+        <h3>Step 4 </h3>
+        <p>The status of the user can be seen below.</p>
+        <p>A post request to https://morning-lake-11189.herokuapp.com/newday resets the sleeping in status to false</p>
+        <p>A post request to https://morning-lake-11189.herokuapp.com/sleepingIn sets the sleeping in status to true</p>
+        <p>https://morning-lake-11189.herokuapp.com/status</p>
+    </div>
+
+    <div class="col-md-12">
         <h2>Recap </h2>
         <p>We start by following IBM's guide for setting up an andriod phone as an IoT device. From there I created my own node red layout which resets the sleeping status of my server every morning at 1:00 am with an API call. In the morning during the wake up time the app needs to recieve sufficent movement data within the 5 minutes intervals or it sets the andriod phone screen to red, and submits a API notification to my server that the user is not up.</p>
     </div>
