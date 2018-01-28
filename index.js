@@ -18,13 +18,9 @@ app.get('/test', function (req, res) {
   res.send('hit');
 }
 );
+
 app.post('/newday', function (req, res) {
     userIsSleepingIn = false;
-    res.send('reset');
-  });
-
-app.post('/sleep', function (req, res) {
-    userIsSleepingIn = true;
     res.send('reset');
   });
 
@@ -34,17 +30,12 @@ app.get('/status', function (req, res) {
 
 app.post('/sleepingIn', function (req, res) {
   console.log('hit');
-  let time = new Date();
-  if (time.getHours() < 9 &&
-    time.getHours() > 10)
-  {
-    res.send("the user doesn't have to be up");
-  } else {
-    userIsSleepingIn = true;
-    res.send('The user is sleeping in');
-  }
+  userIsSleepingIn = true;
+  res.send('The user is sleeping in');
+
 }
 );
+
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
 
 // var mongo = require('mongodb');
