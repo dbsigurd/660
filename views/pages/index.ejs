@@ -20,7 +20,7 @@
   <div class="row">
     <div class="col-md-12">
         <h1>My App</h1>
-        <p>My IoT application utilizes the sensor on my android phone to identify whether or no someone has gotten up and is moving around during the morning. The application sets the IoT start andriod app to red if it hasn't moved in the past 5 minutes between the specified time. In my case between 8:00 and 9:00 am. It also notifies a server through an API call that person is sleeping in. This simply sets the status to sleeping in. In the future I'd use it to trigger a "wake up" event. In the case of the Smart Condo it might include a light out side the condo that goes on to notify people the tenant is not moving. For my own personal interest it reactivate my alarm clock and turn on the lights in the house.</p>
+        <p>My IoT application utilizes the sensor on my Android phone to identify whether or no someone has gotten up and is moving around during the morning. The application sets the IoT start andriod app to red if it hasn't moved in the past 5 minutes between the specified time. In my case between 8:00 and 9:00 am. It also notifies a server through an API call that person is sleeping in. This simply sets the status to sleeping in. In the future I'd use it to trigger a "wake up" event. In the case of the Smart Condo it might include a light out side the condo that goes on to notify people the tenant is not moving. For my own personal interest it reactivate my alarm clock and turn on the lights in the house.</p>
     </div>
     <div class="col-md-12">
       <h3>Step 1 </h3>
@@ -33,7 +33,7 @@
       </p>
       <p>It should like the image below.</p>
       <img src="IoT.JPG">
-      <p>The IBM IoT App in is the android device connected to the node red application. It first checks if the message is coming before the user needs to be up, if the message is from when the user should be moving, or sufficently later in the day. If it is outside the "wake up" hours the app sends a single message to the server letting it know the wake up time is not active, and sends a yellow stand by to the phone. If it is in the wake up time the app checks if the user is moving. If they do not move in 5 minutes the app will notify my server and send a red colour back to the android device.</p>
+      <p>The IBM IoT App in is the Android device connected to the node red application. It first checks if the message is coming before the user needs to be up, if the message is from when the user should be moving, or sufficently later in the day. If it is outside the "wake up" hours the app sends a single message to the server letting it know the wake up time is not active, and sends a yellow stand by to the phone. If it is in the wake up time the app checks if the user is moving. If they do not move in 5 minutes the app will notify my server and send a red colour back to the Android device.</p>
       <p>The timestamp input is an injection that fires every morning at 1:00 am to reset the server for the day.</p>
     </div>
     <div class="col-md-12">
